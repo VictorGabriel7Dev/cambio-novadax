@@ -149,7 +149,7 @@ USER_AGENT     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100
 · Discord: `@VictorGabriel.dev`  
 · Telegram: [t.me/VictorGabriel_Dev](https://t.me/VictorGabriel_Dev)  
   
-Código gerado por [Claude](https://claude.ai).
+Gerado por [Claude](https://claude.ai).
 
 ---
 
