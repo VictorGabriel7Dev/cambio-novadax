@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # https://github.com/VictorGabriel7Dev/cambio-novadax
 # SPDX-License-Identifier: AGPL-3.0-or-later
+# Versão: 1.0
 #
 # Author: Victor Gabriel https://victorgabriel.dev
 # E-mail: contato@victorgabriel.dev
