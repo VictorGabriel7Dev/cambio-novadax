@@ -109,7 +109,7 @@ def info(text: str) -> str:
 # ─────────────────────────── Utilitários ───────────────────────────
 
 def oito_digitos(value: float) -> float:
-    """Arredonda para 8 casas decimais (equivale ao &oitodigitos do Perl)."""
+    """Arredonda para 8 casas decimais."""
     return round(value, 8)
 
 
@@ -157,7 +157,7 @@ def fetch_depth(symbol: str) -> Optional[dict]:
 
 
 def best_ask(depth_data: dict) -> Optional[float]:
-    """Retorna o maior preço entre os asks (mesma lógica do script Perl)."""
+    """Retorna o maior preço entre os asks."""
     asks = depth_data.get("data", {}).get("asks", [])
     if not asks:
         return None
