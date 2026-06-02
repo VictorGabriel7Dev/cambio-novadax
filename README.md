@@ -145,7 +145,6 @@ USER_AGENT     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100
 
 **Victor Gabriel**  
 · [victorgabriel.dev](https://victorgabriel.dev)  
-· [victorgabriel.dev.br](https://victorgabriel.dev.br)  
 · GitHub: [github.com/VictorGabriel7Dev](https://github.com/VictorGabriel7Dev)  
 · LinkedIn: [in/victorgabriel-dev](https://www.linkedin.com/in/victorgabriel-dev)  
 · Discord: `@VictorGabriel.dev`  
