@@ -1,6 +1,8 @@
 [📄 Página](https://victorgabriel.dev/projetos/cambio-novadax) · [💻 GitHub](https://github.com/VictorGabriel7Dev/cambio-novadax)
 # Câmbio NovaDax
 
+![Python 3.10+](https://img.shields.io/badge/-Python%203.10+-2ea44f?style=flat&logo=python&logoColor=white) ![Zero dependências](https://img.shields.io/badge/-Zero%20depend%C3%AAncias-1f9bcf?style=flat) ![AGPL-3.0](https://img.shields.io/badge/-AGPL--3.0-dfb317?style=flat) ![NovaDax API](https://img.shields.io/badge/-NovaDax%20API-555555?style=flat) ![CLI](https://img.shields.io/badge/-CLI-555555?style=flat&logo=gnubash&logoColor=white)
+
 Consultor de cotações e custos de envio de criptomoedas via [NovaDax](https://www.novadax.com.br), direto no terminal.
 
 Dado um valor e uma moeda, o script responde:
