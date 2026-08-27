@@ -223,7 +223,7 @@ def print_network_header(currency: str, chain: str, idx: int, total: int) -> Non
 def print_market_info(currency: str, cotacao: float, minimo: float,
                       taxa_rede: float, fee_type: str, is_sol: bool) -> None:
     """
-    Bloco 1 — Cotação atual + limites e taxa de saque da rede.
+    Bloco 1: Cotação atual + limites e taxa de saque da rede.
     Redes com feeType 'dynamic' não têm taxa conhecida antecipadamente.
     """
     sym = "SOL" if is_sol else "BRL"
@@ -265,7 +265,7 @@ def print_breakdown(moeda: str, quantidade: float, cotacao: float,
                     taxa_rede: float, is_sol: bool,
                     taker_fee: float, taker_div: float) -> float:
     """
-    Bloco 2 — Quanto precisa ser comprado e enviado.
+    Bloco 2: Quanto precisa ser comprado e enviado.
 
     Conceitos:
       • "Precisa COMPRAR"  = quantidade + taxa_rede + taxa_de_compra
@@ -347,7 +347,7 @@ def print_sol_conversion(currency: str, cotacao_ask: float,
                          a_comprar_moeda: float, sol_chain_data: dict,
                          taker_fee: float, taker_div: float) -> None:
     """
-    Bloco 3 — Conversão quando o par não existe em BRL (usa SOL_MOEDA).
+    Bloco 3: Conversão quando o par não existe em BRL (usa SOL_MOEDA).
     Calcula quanto SOL comprar para obter a_comprar_moeda unidades de MOEDA.
     """
     sol_necessario = a_comprar_moeda / cotacao_ask
