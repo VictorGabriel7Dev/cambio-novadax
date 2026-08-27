@@ -83,7 +83,7 @@ Aceita número e moeda em qualquer ordem, com ou sem espaço, vírgula ou ponto 
 ## Requisitos
 
 - Python 3.10 ou superior
-- Sem dependências externas — usa apenas a biblioteca padrão (`urllib`, `json`, `re`, `sys`)
+- Sem dependências externas, usa apenas a biblioteca padrão (`urllib`, `json`, `re`, `sys`)
 
 ---
 
@@ -127,17 +127,17 @@ QUANTIDADE_MEDIA = 15     # quantidade de ofertas a buscar; usa o preço mais al
 USER_AGENT     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"
 ```
 
-**`VIP_LEVEL`** — define a taxa taker usada nos cálculos. O valor é buscado automaticamente da API conforme o nível informado. Níveis disponíveis: `VIP0` a `VIP10`.
+**`VIP_LEVEL`**: define a taxa taker usada nos cálculos. O valor é buscado automaticamente da API conforme o nível informado. Níveis disponíveis: `VIP0` a `VIP10`.
 
-**`QUANTIDADE_MEDIA`** — quantas ofertas do livro de ordens são consultadas. O script usa o **maior preço** entre elas, representando o pior caso de execução a mercado.
+**`QUANTIDADE_MEDIA`**: quantas ofertas do livro de ordens são consultadas. O script usa o **maior preço** entre elas, representando o pior caso de execução a mercado.
 
-**`USER_AGENT`** — para ser usado nas requisições http.
+**`USER_AGENT`**: para ser usado nas requisições http.
 
 ---
 
 ## Observações
 
-- Redes com `feeType: dynamic` não têm taxa de saque fixa — o valor é calculado pela NovaDax no momento do saque. O script exibe um aviso e não apresenta o breakdown de custo para essas redes.
+- Redes com `feeType: dynamic` não têm taxa de saque fixa, o valor é calculado pela NovaDax no momento do saque. O script exibe um aviso e não apresenta o breakdown de custo para essas redes.
 - Quando uma moeda possui múltiplas redes (ex: DOGE na rede nativa e BEP20), o script exibe o resultado para cada rede separadamente.
 - Os valores são informativos e podem variar entre o momento da consulta e a execução da operação.
 
