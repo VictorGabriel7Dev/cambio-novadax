@@ -68,18 +68,6 @@ Funciona para todas as moedas listadas na NovaDax. Redes com taxa dinâmica (`dy
 
 ---
 
-## Uso
-
-```bash
-python Cambio-NovaDax.py 0.1 DASH
-python Cambio-NovaDax.py 0.1DASH
-python Cambio-NovaDax.py DASH0.1
-```
-
-Aceita número e moeda em qualquer ordem, com ou sem espaço, vírgula ou ponto como separador decimal.
-
----
-
 ## Requisitos
 
 - Python 3.10 ou superior
@@ -96,6 +84,35 @@ python Cambio-NovaDax.py 0.05 BTC
 ```
 
 Nenhum `pip install` necessário.
+
+---
+
+## Configuração
+
+Abra o arquivo e ajuste as constantes no topo:
+```python
+VIP_LEVEL      = "VIP0"   # nível padrão; ajuste conforme seu cadastro
+QUANTIDADE_MEDIA = 15     # quantidade de ofertas a buscar; usa o preço mais alto
+USER_AGENT     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"
+```
+
+**`VIP_LEVEL`**: define a taxa taker usada nos cálculos. O valor é buscado automaticamente da API conforme o nível informado. Níveis disponíveis: `VIP0` a `VIP10`.
+
+**`QUANTIDADE_MEDIA`**: quantas ofertas do livro de ordens são consultadas. O script usa o **maior preço** entre elas, representando o pior caso de execução a mercado.
+
+**`USER_AGENT`**: para ser usado nas requisições http.
+
+---
+
+## Uso
+
+```bash
+python Cambio-NovaDax.py 0.1 DASH
+python Cambio-NovaDax.py 0.1DASH
+python Cambio-NovaDax.py DASH0.1
+```
+
+Aceita número e moeda em qualquer ordem, com ou sem espaço, vírgula ou ponto como separador decimal.
 
 ---
 
@@ -118,23 +135,6 @@ a_comprar  = a_enviar   / (1 - taker_fee)   # o que você compra na exchange
 ```
 
 ---
-## Configuração
-
-Abra o arquivo e ajuste as constantes no topo:
-```python
-VIP_LEVEL      = "VIP0"   # nível padrão; ajuste conforme seu cadastro
-QUANTIDADE_MEDIA = 15     # quantidade de ofertas a buscar; usa o preço mais alto
-USER_AGENT     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"
-```
-
-**`VIP_LEVEL`**: define a taxa taker usada nos cálculos. O valor é buscado automaticamente da API conforme o nível informado. Níveis disponíveis: `VIP0` a `VIP10`.
-
-**`QUANTIDADE_MEDIA`**: quantas ofertas do livro de ordens são consultadas. O script usa o **maior preço** entre elas, representando o pior caso de execução a mercado.
-
-**`USER_AGENT`**: para ser usado nas requisições http.
-
----
-
 ## Observações
 
 - Redes com `feeType: dynamic` não têm taxa de saque fixa, o valor é calculado pela NovaDax no momento do saque. O script exibe um aviso e não apresenta o breakdown de custo para essas redes.
